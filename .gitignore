@@ -1,5 +1,13 @@
 *.class
 
+
+#忽略文件夹
+out
+.idea
+web
+
+wooyun.iml
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
