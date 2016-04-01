@@ -49,8 +49,6 @@ public class GetAllPagesOfWooyundrops {
                 }
                 reader.close();
 
-                //士大夫撒
-
                 String moreThanFivePageRegx = "([1-9][0-9]*)\' class=\'last\'>.*?</a>";
                 Pattern moreThanFivePagePattern = Pattern.compile(moreThanFivePageRegx);
                 Matcher moreThanFivePageMatcher = moreThanFivePagePattern.matcher(content.toString());
@@ -177,12 +175,6 @@ public class GetAllPagesOfWooyundrops {
         String catalog = argus.get("catalog");
         String page = argus.get("pageNum");
         String articalName = argus.get("articalName").replaceAll(":|<|>|\\*|\\?|/"," ");
-
-//        String articalUrl = "http://drops.wooyun.org/papers/5460";
-//        String path = "C:\\wooyundrops";
-//        String catalog = "papers";
-//        String page = "19";
-//        String articalName = "Exploiting CVE-2015-0311, Part II: Bypassing Control Flow Guard on Windows 8.1".replaceAll(":|<|>|\\*|\\?|/"," ");
 
         File targetCatalog = new File(path + "\\" + catalog);
         File targetCatalogPage = new File(path + "\\" + catalog + "\\" + page);
